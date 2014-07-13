@@ -1,0 +1,27 @@
+{
+  "name": "AkronWiT",
+  "version": "0.0.0",
+  "description": "WordPress Theme for Akron Women in Tech",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wirthdesign/akronwit.git"
+  },
+  "author": "Kevin Wirth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wirthdesign/akronwit/issues"
+  },
+  "homepage": "https://github.com/wirthdesign/akronwit"
+}
