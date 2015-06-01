@@ -1,0 +1,244 @@
+/* home.scss */
+
+/* Logo */
+.logo-awit {
+  width: 290px;
+  height: 122px;
+  border: 2px solid $brand-color-primary;
+  padding-top: 16px;
+  display: block;
+  margin: 16px auto;
+  font: {
+    family: proxima-nova-condensed;
+    size: em(42);
+    weight: normal;
+  }
+  line-height: 1.2em;
+  /* Logo: Emphasis */
+  .emphasis {
+    display: block;
+    font: {
+      size: em(69, 42);
+      weight: bold;
+    }
+  }
+}
+
+
+/* Introduction */
+.introduction {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  background: {
+    image: url('img/background-welcome-large.jpg');
+    size: cover;
+    position: 50% 100%;
+  }
+  /* Single and Page Template Introductions */
+  .page-template-default &, .single-post &, .blog & {
+    padding: .5em 0;
+  }
+}
+
+
+/* What We Do */
+.what-we-do {
+  /* What We Do: Text */
+  .text {
+    margin-bottom: 32px;
+  }
+  @include media($screen-md + 'px') {
+    /* What We Do: Text */
+    .text {
+      width: percentage(578 / 1206);
+      float: left;
+    }
+    /* What We Do: Photo */
+    .photo {
+      width: percentage(578 / 1206);
+      float: right;
+    }
+  } 
+}
+
+
+/* Group Counts */
+.group-counts {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: {
+    image: url('img/background-group_counts.jpg');
+    size: cover;
+    position: 50% 100%;
+  }
+  /* Group Counts: Count */
+  .count {
+    width: 82px;
+    height: 85px;
+    display: block;
+    margin: 0 auto 65px;
+    overflow: hidden;
+    text-align: center;
+    @include media($screen-md + 'px') {
+      float: left;
+      margin: 0 60px 0 0;
+    }
+    /* Group Counts: Last Count */
+    &.is-last {
+      margin-bottom: 0;
+    }
+    /* Group Counts: Count: Number */
+    .number {
+      border-bottom: 2px solid #fedc80;
+      display: block;
+      font: {
+        size: em(60);
+      }
+      line-height: 1em;
+    }
+  }
+}
+
+
+/* Our Sponsors */
+.our-sponsors {
+  /* Our Sponsors: Logo Wrapper */
+  .logo-wrapper {
+    display: block;
+    /* Our Sponsors: Logo Wrapper: Logo */
+    .logo {
+      float: left;
+    }
+  }
+}
+
+
+/* Quotes */
+.content-quote {
+  padding: 60px 0;
+  text-transform: uppercase;
+  background: {
+    image: url('img/background-quote-large.jpg');
+    size: cover;
+    position: 50% 100%;
+  }
+  /* Quotes: Quote */
+  .quote {
+    width: 100%;
+    @include media($screen-md + 'px') {
+      width: percentage(444 / $screen-md);
+    }
+    font: {
+      size: em(19);
+      weight: bold;
+    }
+    line-height: 1.5em;
+    /* Quotes: Symbol */
+    .symbol {
+      color: $brand-color-primary;
+      display: block;
+      overflow: hidden;
+      line-height: 1em;
+      font-size: em(38);
+    }
+    /* Quotes: Name */
+    .name {
+      display: block;
+      margin-top: 1em;
+      font-size: em(12);
+    }
+  }
+}
+
+
+/* Connect */
+.content-connect {
+  padding: 3.75em 0;
+  /* Connect: Item */
+  .item {
+    float: left;
+    margin-right: 10px;
+    /* Connect: Item: Anchor */
+    a {
+      color: $brand-color-primary;
+      font-size: em(36);
+    }
+  }
+}
+
+
+/* Contact Us */
+.content-contact-us {
+  overflow: hidden;
+  background: {
+    image: url('img/background-contact_us-large.jpg');
+    size: cover;
+    position: 50% 100%;
+  }
+  /* Contact Us: Field Label */
+  .field-label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  /* Contact Us: Form Field */
+  .form-field {
+    margin-bottom: 15px;
+    /* Contact Us: Form Field: Input */
+    .wpcf7-text {
+      width: 100%;
+      padding: 5px;
+      height: 26px;
+      border: none;
+      font: {
+        size: 1em;
+        family: inherit;
+      }
+      border-radius: 3px;
+    }
+    /* Contact Us: Form Field: Textarea */
+    .wpcf7-textarea {
+      width: 100%;
+      padding: 5px;
+      font: {
+        size: 1em;
+        family: inherit;
+      }
+      border-radius: 3px;
+    }
+  }
+  /* Contact Us: First Name Field */
+  .field-first-name {
+    width: 210px;
+    margin-right: 24px;
+    float: left;
+  }
+  /* Contact Us: Last Name Field */
+  .field-last-name {
+    width: 210px;
+    float: left;
+  }
+  /* Contact Us: Email Field */
+  .field-email {
+    width: 289px;
+  }
+  /* Contact Us: Message Field */
+  .field-message {
+    width: 444px;
+  }
+  /* Contact Us: Submit */
+  .wpcf7-submit {
+    padding: .5em 1.5em;
+    border: none;
+    background: $brand-color-primary;
+    color: #fff;
+    font: {
+      family: inherit;
+      size: inherit;
+      weight: bold;
+    }
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+}

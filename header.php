@@ -9,6 +9,10 @@
   <title><?php bloginfo( 'name' ); ?> <?php wp_title(); ?></title>
   <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/style.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="//use.typekit.net/hne7ced.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>

@@ -1,0 +1,186 @@
+/* base.scss */
+
+/* Body */
+body {
+  color: #666;
+  font: {
+    size: em(16);
+    family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+  line-height: 1.5em;
+}
+
+
+/* Links */
+a {
+  &:link    { color: $brand-color-primary; text-decoration: none; }
+  &:hover   { color: $brand-color-primary; text-decoration: none; }
+  &:active  { color: $brand-color-primary; text-decoration: none; }
+  &:visited { color: $brand-color-primary; text-decoration: none; }
+}
+
+
+/* Headings */
+h1,h2,h3,h4 {
+  font-weight: bold;
+}
+
+/* Heading 1 */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Heading 2 */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+/* Heading 3 */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+/* Heading 4 */
+h4 {
+  margin: 1.33em 0;
+}
+/* Heading 5 */
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0;
+}
+/* Heading 6 */
+h6 {
+  font-size: .75em;
+  margin: 2.33em 0;
+}
+
+
+/* Paragraph */
+p {
+  margin: 1em 0;
+}
+
+
+/* Lists */
+ul, ol {
+  margin: 1em 1.5em;
+  overflow: hidden;
+}
+
+
+/* Unordered List */
+ul {
+  list-style: disc inside;
+}
+
+
+/* Ordered List */
+ol {
+  list-style: decimal inside;
+}
+
+
+/* Strong */
+strong {
+  font-weight: bold;
+}
+
+
+/* Emphasis */
+em {
+  font-style: italic;
+}
+
+
+/* Hide But Not Front Screen Readers */
+.visually-hidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+
+/* WordPress Core */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
