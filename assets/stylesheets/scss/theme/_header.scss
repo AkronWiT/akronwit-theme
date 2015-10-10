@@ -1,0 +1,115 @@
+/* navigation.scss */
+
+/* Navigation */
+.content-wrapper.navigation {
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 1);
+  @include retina-image('assets/img/background-subtle-white', 206px 206px, jpg);
+  line-height: 1em;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, .5);
+  /* Navigation: Text Logo */
+  .logo-text {
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    line-height: 2em;
+    text-transform: uppercase;
+    @include media(480px) {
+      float: left;
+    }
+  }
+  /* Navigation: Menu Button */
+  .btn {
+    margin-top: 14px;
+    float: right;
+    cursor: pointer;
+    @include media(480px) {
+      display: none;
+    }
+  }
+  /* Navigation: List Items */
+  .menu-items {
+    width: 100%;
+    margin: 0;
+    display: none;
+    text-align: right;
+    background: #fff;
+    @include media(480px) {
+      width: 500px;
+      display: block;
+      float: right;
+      background: transparent;
+    }
+    /* Navigation: Open List Items */
+    &.is-open {
+      display: block;
+    }
+    /* Navigation: List Items: List Item */
+    .menu-item {
+      width: 100%;
+      display: block;
+      float: left;
+      clear: both;
+      text-align: center;
+      @include media(480px) {
+        width: auto;
+        display: inline-block;
+        margin: 0 17px;
+        float: none;
+        clear: none;
+      }
+      /* Navigation: List Items: Last List Item */
+      &:last-child {
+        margin-right: 0;
+      }
+      /* Navigation: List Items: First List Item */
+      &:first-child {
+        /* Navigation: List Items: First List Item: Dot */
+        .dot {
+          left: -999em;
+        }
+      }
+      /* Navigation: List Items: Link */
+      a {
+        display: block;
+        padding: 22px 0 17px;
+        color: #515151;
+        text-transform: uppercase;
+        font-size: em(14);
+        position: relative;
+        @include media(480px) {
+          /* Navigation: List Items: Hover Link */
+          &:hover {
+            border-bottom: 5px solid #78B988;
+            background: transparent;
+          }
+        }
+        /* Navigation: List Items: Hover Link */
+        &:hover {
+          background: #78B988;
+          color: #fff;
+          @include media(480px) {
+            background: transparent;
+            color: #515151;
+          }
+        }
+        /* Navigation: List Items: Dot */
+        .dot {
+          display: none;
+          font-size: em(18);
+          font-weight: bold;
+          position: absolute;
+          left: -19px;
+          @include media(480px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

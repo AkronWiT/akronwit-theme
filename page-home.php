@@ -6,11 +6,12 @@ Template Name: Home
 
 <?php get_header(); ?>
 
-<div class="content-wrapper dark introduction">
+<!-- INTRODUCTION -->
+<div id="our-goal-wrapper" class="content-wrapper dark introduction">
   <div class="content">
-    <p>Hello, we are </p>
-    <h1 class="logo-awit"><span class="emphasis">Akron</span> Women in Tech</h1>
-    <p>Women learning code</p>
+    <?php if ( get_post_meta($post->ID, 'what_we_do', true) ) { ?>
+      <div id="our-goal" class="goal-wrapper"><p class="our-goal"><?php the_field('what_we_do'); ?></p></div>
+    <?php } ?>
   </div>
 </div>
 
@@ -22,15 +23,15 @@ Template Name: Home
       <p><?php the_field('what_we_do'); ?></p>
 <?php } ?>
     </div>
-    <img src="<?php bloginfo( 'template_url' ); ?>/img/photo-what_we_do.jpg" alt="Photo of coffee and cookies" class="photo" />
+    <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/photo-what_we_do.jpg" alt="Photo of coffee and cookies" class="photo" />
   </div>
 </div>
 
 <div class="content-wrapper dark group-counts">
   <div class="content">
     <h2 class="title visually-hidden">Counts</h2>
-    <p class="count"><span class="number">34</span> Members</p>
-    <p class="count is-last"><span class="number">1</span> Meetup</p>
+    <p class="count"><span class="number">194</span> Members</p>
+    <p class="count is-last"><span class="number">20</span> Meetups</p>
   </div>
 </div>
 
@@ -38,7 +39,7 @@ Template Name: Home
   <div class="content">
     <h2 class="title">Our Sponsors</h2>
     <div class="logo-wrapper">
-      <a href="http://osctechlab.com" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/logo-osc_tech_lab.png" alt=" OSC Tech Lab Logo" class="logo logo-osc-tech-lab" /></a>
+      <a href="http://osctechlab.com" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/logo-osc_tech_lab.png" alt=" OSC Tech Lab Logo" class="logo logo-osc-tech-lab" /></a>
     </div>
   </div>
 </div>
@@ -77,23 +78,5 @@ Template Name: Home
     <?php echo do_shortcode( '[contact-form-7 title="Contact Us"]' ); ?>
   </div>
 </div>
-
-
-<script>
-
-//  $.ajax({
-//    url: 'http://api.meetup.com/topics.json/?callback=gotIt&page=1&key=ABDE12456AB2324445',
-//    url: 'https://api.meetup.com/2/members?&sign=true&photo-host=public&group_urlname=Akron-Women-In-Tech&page=20',
-//    dataType: 'json',
-//    success: function(data) {      
-//      //console.log(data.meta.total_count);
-//      console.log(data);
-//    },
-//    error: function() {
-//      return false;
-//    }
-//  });
-
-</script>
 
 <?php get_footer(); ?>

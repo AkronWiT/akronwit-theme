@@ -14,11 +14,12 @@ $screen-sm: 320;
 $screen-md: 769;
 $screen-lg: 1920;
 
-@import 'bourbon/app/assets/stylesheets/bourbon';
-@import 'neat/app/assets/stylesheets/neat';
-@import 'Font-Awesome/scss/font-awesome.scss';
+@import 'vendor/bourbon/app/assets/stylesheets/bourbon';
+@import 'vendor/neat/app/assets/stylesheets/neat';
+
 
 @import 'reset';
 @import 'base';
 @import 'layout';
+@import 'theme/header';
 @import 'home';

@@ -1,46 +1,41 @@
 /* home.scss */
 
-/* Logo */
-.logo-awit {
-  width: 290px;
-  height: 122px;
-  border: 2px solid $brand-color-primary;
-  padding-top: 16px;
-  display: block;
-  margin: 16px auto;
-  font: {
-    family: proxima-nova-condensed;
-    size: em(42);
-    weight: normal;
-  }
-  line-height: 1.2em;
-  /* Logo: Emphasis */
-  .emphasis {
-    display: block;
-    font: {
-      size: em(69, 42);
-      weight: bold;
-    }
-  }
-}
-
-
 /* Introduction */
 .introduction {
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
+  height: 480px;
+  @include retina-image('assets/img/background-welcome-large', 2080px 1170px, jpg);
   background: {
-    image: url('img/background-welcome-large.jpg');
     size: cover;
-    position: 50% 100%;
+    position: 50% 50%;
+  }
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, .5);
+  text-align: center;
+  .goal-wrapper {
+    margin: 0 auto;
+    @include media(480px) {
+      max-width: 750px;
+    }
+  }
+  /* Introduction: Our Goal */
+  .our-goal {
+    padding: 2px 15px;
+    display: inline;
+    background: rgba(120, 185, 135, .7);
+    font-size: em(28);
+    line-height: 1.5em;
+    @include media(480px) {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: em(36);
+    }
   }
   /* Single and Page Template Introductions */
-  .page-template-default &, .single-post &, .blog & {
+  .page-template-default &,
+  .single-post &,
+  .blog & {
     padding: .5em 0;
   }
 }
-
 
 /* What We Do */
 .what-we-do {
@@ -68,13 +63,13 @@
   text-transform: uppercase;
   font-weight: bold;
   background: {
-    image: url('img/background-group_counts.jpg');
+    image: url('assets/img/background-group_counts.jpg');
     size: cover;
     position: 50% 100%;
   }
   /* Group Counts: Count */
   .count {
-    width: 82px;
+    width: 100px;
     height: 85px;
     display: block;
     margin: 0 auto 65px;
@@ -119,7 +114,7 @@
   padding: 60px 0;
   text-transform: uppercase;
   background: {
-    image: url('img/background-quote-large.jpg');
+    image: url('assets/img/background-quote-large.jpg');
     size: cover;
     position: 50% 100%;
   }
@@ -172,7 +167,7 @@
 .content-contact-us {
   overflow: hidden;
   background: {
-    image: url('img/background-contact_us-large.jpg');
+    image: url('assets/img/background-contact_us-large.jpg');
     size: cover;
     position: 50% 100%;
   }
