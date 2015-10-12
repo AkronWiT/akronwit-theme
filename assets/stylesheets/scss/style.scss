@@ -3,7 +3,7 @@ Theme Name: Akron Women in Tech
 Description: Custom WordPress theme for Akron WiT
 Author: Kevin Wirth
 Description: Custom WordPress for Akron WiT.
-Version: 1.3
+Version: 1.5
 */
 
 $brand-color-primary: #78b987;
@@ -23,3 +23,6 @@ $screen-lg: 1920;
 @import 'layout';
 @import 'theme/header';
 @import 'home';
+
+@import 'modules/post';
+@import 'modules/wordpress';

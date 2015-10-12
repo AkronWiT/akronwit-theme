@@ -1,0 +1,13 @@
+/* Post Wrapper */
+.post-wrapper {
+  border-top: 1px solid #eee;
+  /* Post Wrapper: Post Title */
+  .post-title {
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  /* Post Wrapper: Paragraph */
+  p {
+    margin: .5em 0;
+  }
+}
