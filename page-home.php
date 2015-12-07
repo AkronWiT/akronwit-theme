@@ -39,7 +39,11 @@ Template Name: Home
   <div class="content">
     <h2 class="title">Our Sponsors</h2>
     <div class="logo-wrapper">
-      <a href="http://osctechlab.com" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/logo-osc_tech_lab.png" alt=" OSC Tech Lab Logo" class="logo logo-osc-tech-lab" /></a>
+    <?php if( have_rows('sponsor_logos') ): ?>
+      <?php while ( have_rows('sponsor_logos') ) : the_row(); ?>
+      <a href="<?php the_sub_field('url'); ?>" target="_blank" title="<?php the_sub_field('name'); ?>"><img src="<?php the_sub_field('logo'); ?>" alt="<?php the_sub_field('name'); ?> Logo" class="logo " /></a>
+      <?php endwhile; ?>
+    <?php endif; ?>
     </div>
   </div>
 </div>
