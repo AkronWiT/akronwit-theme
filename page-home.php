@@ -8,6 +8,7 @@ Template Name: Home
 
 <!-- SMW adding meetup api counts to webpage -->
 <script>
+function updateContent(){
   $.ajax({
 	type:'GET',
 	url:'https://api.meetup.com/2/groups?offset=0&format=json&group_urlname=Akron-Women-In-Tech&only=members&callback=jQuery1113014036352676339447_1436571834493&photo-host=public&page=20&radius=25.0&fields=&order=id&desc=false&_=1436571834494&sig_id=45621862&sig=193eedf432bb623f60d8a47ece16bca89d4abcdd',
@@ -27,6 +28,7 @@ Template Name: Home
 	  $('#events').html(data.meta.total_count);
 	}
   });
+ }
 </script>
 
 <!-- INTRODUCTION -->
@@ -99,4 +101,5 @@ Template Name: Home
   </div>
 </div>
 
+<script>updateContent();</script>
 <?php get_footer(); ?>
